@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>生命体征</title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="/bootstrap/assets/js/jquery.js"></script>
+    <script src="/ECharts/dist/echarts.js"></script>
+    <script type="text/javascript">
+
+        var datas = null;//= {"xAxis":["检查开发构想","测试进行中","待更新","客户确认"],"legend":["吴晓法"],"data":["1","6","6","1"]};
+
+
+
+        $.ajax({
+            type: "post",
+            dataType: "text",
+            url: "/DataSource/Test.ashx",
+            async: false,
+            success: function (data, textStatus) {
+
+                if (data != null) {
+                    datas = data;
+                }
+                else {
+                    alert("获取测试类型统计数据失败！");
+                }
+
+            }
+        });
+
+
+
+
+
+
+
+
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: '/ECharts/dist'
+            }
+        });
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+
+                option = {
+                    title: {
+                        text: '生命体征',
+                        subtext: '生命体征曲线'
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: function (params) {
+                            var date = new Date(params.value[0]);
+                            data = date.getFullYear() + '-'
+                                   + (date.getMonth() + 1) + '-'
+                                   + date.getDate() + ' '
+                                   + date.getHours() + ':'
+                                   + date.getMinutes();
+                            return data + '<br/>'
+                                   + params.value[1] + ', '
+                                   + params.value[2];
+                        }
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: { show: true },
+                            dataView: { show: true, readOnly: false },
+                            restore: { show: true },
+                            saveAsImage: { show: true }
+                        }
+                    },
+                    dataZoom: {
+                        show: true,
+                        start: 0
+                    },
+                    legend: {
+                        data: ['series1', 'series2']
+                    },
+                    grid: {
+                        y2: 80
+                    },
+                    xAxis: [
+                        {
+                            type: 'time',
+                            splitNumber: 10
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value'
+                        }
+                    ],
+                    series: [
+                        {
+                            name: 'series1',
+                            type: 'line',
+                            showAllSymbol: true,
+                            symbolSize: 2,
+                            data: (function () {
+                                var d = [];
+                                var len = 0;
+                                var now = new Date();
+                                var value;
+                                while (len++ < 200) {
+                                    d.push([
+                                        new Date(2014, 9, 1, 0, len * 10000),
+                                        (Math.random() * 30).toFixed(2) - 0,
+                                        (Math.random() * 100).toFixed(2) - 0
+                                    ]);
+                                }
+                                return d;
+                            })()
+                        }
+                        ,
+                        {
+                            name: 'series2',
+                            type: 'line',
+                            showAllSymbol: true,
+                            symbolSize: 2,
+                            data: (function () {
+                                var d = [];
+                                var len = 0;
+                                var now = new Date();
+                                var value;
+                                while (len++ < 200) {
+                                    d.push([
+                                        new Date(2014, 9, 1, 0, len * 10000),
+                                        (Math.random() * 30).toFixed(2) - 0,
+                                        (Math.random() * 100).toFixed(2) - 0
+                                    ]);
+                                }
+                                return d;
+                            })()
+                        }
+                    ]
+                };
+
+
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+        );
+
+
+
+
+    </script>
+</body>
+</html>

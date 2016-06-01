@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>添加新闻</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr><td>新闻标题</td><td><input type="text" name="Title" /></td></tr>
+            <tr><td>作者</td><td><input type="text" name="Author" /></td></tr>
+            <tr>
+            <td>上传图片</td>
+            <td>
+                <input type="file" id="fileUpImage" >
+                <input type="submit" value="上传图片" id="btnFileUp" />
+                <div id="showImage">
+                    <img />
+                </div>
+                </td></tr>
+            <tr><td>新闻内容</td><td><input type="text" name="Msg" /></td></tr>
+        </table>
+    </div>
+</body>
+</html>

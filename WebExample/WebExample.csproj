@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75E5843A-1187-40CD-813F-9E5657068A1E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebExample</RootNamespace>
+    <AssemblyName>WebExample</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NVelocity">
+      <HintPath>..\Bin\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\avatars\avatar.png" />
+    <Content Include="Assets\avatars\avatar1.png" />
+    <Content Include="Assets\avatars\avatar2.png" />
+    <Content Include="Assets\avatars\avatar3.png" />
+    <Content Include="Assets\avatars\avatar4.png" />
+    <Content Include="Assets\avatars\avatar5.png" />
+    <Content Include="Assets\avatars\profile-pic.jpg" />
+    <Content Include="Assets\avatars\user.jpg" />
+    <Content Include="Assets\css\ace-ie.min.css" />
+    <Content Include="Assets\css\ace-responsive.min.css" />
+    <Content Include="Assets\css\ace-skins.min.css" />
+    <Content Include="Assets\css\ace.min.css" />
+    <Content Include="Assets\css\bootstrap-editable.css" />
+    <Content Include="Assets\css\bootstrap-responsive.css" />
+    <Content Include="Assets\css\bootstrap-responsive.min.css" />
+    <Content Include="Assets\css\bootstrap-timepicker.css" />
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\chosen-sprite%402x.png" />
+    <Content Include="Assets\css\chosen-sprite.png" />
+    <Content Include="Assets\css\chosen.css" />
+    <Content Include="Assets\css\colorbox.css" />
+    <Content Include="Assets\css\colorpicker.css" />
+    <Content Include="Assets\css\datepicker.css" />
+    <Content Include="Assets\css\daterangepicker.css" />
+    <Content Include="Assets\css\docs.css" />
+    <Content Include="Assets\css\font-awesome-ie7.min.css" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\fullcalendar.css" />
+    <Content Include="Assets\css\images\border.png" />
+    <Content Include="Assets\css\images\controls.png" />
+    <Content Include="Assets\css\images\loading.gif" />
+    <Content Include="Assets\css\images\loading_background.png" />
+    <Content Include="Assets\css\images\overlay.png" />
+    <Content Include="Assets\css\img\alpha.png" />
+    <Content Include="Assets\css\img\hue.png" />
+    <Content Include="Assets\css\img\saturation.png" />
+    <Content Include="Assets\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Assets\css\jquery.gritter.css" />
+    <Content Include="Assets\css\prettify.css" />
+    <Content Include="Assets\css\select2-spinner.gif" />
+    <Content Include="Assets\css\select2.css" />
+    <Content Include="Assets\css\select2.png" />
+    <Content Include="Assets\css\select2x2.png" />
+    <Content Include="Assets\font\fontawesome-webfont.svg" />
+    <Content Include="Assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Assets\ico\favicon.ico" />
+    <Content Include="Assets\ico\favicon.png" />
+    <Content Include="Assets\images\gallery\image-1.jpg" />
+    <Content Include="Assets\images\gallery\image-2.jpg" />
+    <Content Include="Assets\images\gallery\image-3.jpg" />
+    <Content Include="Assets\images\gallery\image-4.jpg" />
+    <Content Include="Assets\images\gallery\image-5.jpg" />
+    <Content Include="Assets\images\gallery\image-6.jpg" />
+    <Content Include="Assets\images\gallery\thumb-1.jpg" />
+    <Content Include="Assets\images\gallery\thumb-2.jpg" />
+    <Content Include="Assets\images\gallery\thumb-3.jpg" />
+    <Content Include="Assets\images\gallery\thumb-4.jpg" />
+    <Content Include="Assets\images\gallery\thumb-5.jpg" />
+    <Content Include="Assets\images\gallery\thumb-6.jpg" />
+    <Content Include="Assets\images\gritter-light.png.html" />
+    <Content Include="Assets\images\gritter.png.html" />
+    <Content Include="Assets\images\ie-spacer.gif.html" />
+    <Content Include="Assets\img\bootstrap-docs-readme.png" />
+    <Content Include="Assets\img\bootstrap-mdo-sfmoma-01.jpg" />
+    <Content Include="Assets\img\bootstrap-mdo-sfmoma-02.jpg" />
+    <Content Include="Assets\img\bootstrap-mdo-sfmoma-03.jpg" />
+    <Content Include="Assets\img\bs-docs-bootstrap-features.png" />
+    <Content Include="Assets\img\bs-docs-masthead-pattern.png" />
+    <Content Include="Assets\img\bs-docs-responsive-illustrations.png" />
+    <Content Include="Assets\img\bs-docs-twitter-github.png" />
+    <Content Include="Assets\img\clear.png.html" />
+    <Content Include="Assets\img\example-sites\8020select.png" />
+    <Content Include="Assets\img\example-sites\adoptahydrant.png" />
+    <Content Include="Assets\img\example-sites\breakingnews.png" />
+    <Content Include="Assets\img\example-sites\fleetio.png" />
+    <Content Include="Assets\img\example-sites\gathercontent.png" />
+    <Content Include="Assets\img\example-sites\jshint.png" />
+    <Content Include="Assets\img\example-sites\kippt.png" />
+    <Content Include="Assets\img\example-sites\soundready.png" />
+    <Content Include="Assets\img\examples\bootstrap-example-carousel.png" />
+    <Content Include="Assets\img\examples\bootstrap-example-fluid.png" />
+    <Content Include="Assets\img\examples\bootstrap-example-justified-nav.png" />
+    <Content Include="Assets\img\examples\bootstrap-example-marketing-narrow.png" />
+    <Content Include="Assets\img\examples\bootstrap-example-marketing.png" />
+    <Content Include="Assets\img\examples\bootstrap-example-signin.png" />
+    <Content Include="Assets\img\examples\bootstrap-example-starter.png" />
+    <Content Include="Assets\img\examples\bootstrap-example-sticky-footer.png" />
+    <Content Include="Assets\img\examples\browser-icon-chrome.png" />
+    <Content Include="Assets\img\examples\browser-icon-firefox.png" />
+    <Content Include="Assets\img\examples\browser-icon-safari.png" />
+    <Content Include="Assets\img\examples\slide-01.jpg" />
+    <Content Include="Assets\img\examples\slide-02.jpg" />
+    <Content Include="Assets\img\examples\slide-03.jpg" />
+    <Content Include="Assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Assets\img\glyphicons-halflings.png" />
+    <Content Include="Assets\img\grid-baseline-20px.png" />
+    <Content Include="Assets\img\less-logo-large.png" />
+    <Content Include="Assets\img\loading.gif.html" />
+    <Content Include="Assets\img\responsive-illustrations.png" />
+    <Content Include="Assets\js\%402x.%241.html" />
+    <Content Include="Assets\js\1.10.2.html" />
+    <Content Include="Assets\js\1.10.3.html" />
+    <Content Include="Assets\js\1.3.1.html" />
+    <Content Include="Assets\js\1.6.1.html" />
+    <Content Include="Assets\js\1.9.4.html" />
+    <Content Include="Assets\js\2.0.3.html" />
+    <Content Include="Assets\js\4.0em.html" />
+    <Content Include="Assets\js\a.chzn-single.html" />
+    <Content Include="Assets\js\a.close.html" />
+    <Content Include="Assets\js\ace-elements.min.js" />
+    <Content Include="Assets\js\ace.min.js" />
+    <Content Include="Assets\js\additional-methods.min.js" />
+    <Content Include="Assets\js\application.js" />
+    <Content Include="Assets\js\autosize.destroy.html" />
+    <Content Include="Assets\js\autosize.resize.html" />
+    <Content Include="Assets\js\autosize.resizeIncludeStyle.html" />
+    <Content Include="Assets\js\beforeactivate._change.html" />
+    <Content Include="Assets\js\blur.inputlimiter.html" />
+    <Content Include="Assets\js\blur.mask.html" />
+    <Content Include="Assets\js\blur.validate-equalTo.html" />
+    <Content Include="Assets\js\bootbox.min.js" />
+    <Content Include="Assets\js\bootstrap-affix.js" />
+    <Content Include="Assets\js\bootstrap-alert.js" />
+    <Content Include="Assets\js\bootstrap-button.js" />
+    <Content Include="Assets\js\bootstrap-carousel.js" />
+    <Content Include="Assets\js\bootstrap-collapse.js" />
+    <Content Include="Assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Assets\js\bootstrap-dropdown.js" />
+    <Content Include="Assets\js\bootstrap-modal.js" />
+    <Content Include="Assets\js\bootstrap-popover.js" />
+    <Content Include="Assets\js\bootstrap-scrollspy.js" />
+    <Content Include="Assets\js\bootstrap-tab.js" />
+    <Content Include="Assets\js\bootstrap-tag.min.js" />
+    <Content Include="Assets\js\bootstrap-tooltip.js" />
+    <Content Include="Assets\js\bootstrap-transition.js" />
+    <Content Include="Assets\js\bootstrap-typeahead.js" />
+    <Content Include="Assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="Assets\js\bootstrap.js" />
+    <Content Include="Assets\js\bootstrap.min.js" />
+    <Content Include="Assets\js\change.ace_inner_call.html" />
+    <Content Include="Assets\js\change.DT.html" />
+    <Content Include="Assets\js\change.select2.html" />
+    <Content Include="Assets\js\change._change.html" />
+    <Content Include="Assets\js\chosen.jquery.min.js" />
+    <Content Include="Assets\js\click.affix.data-api.html" />
+    <Content Include="Assets\js\click.alert.data-api.html" />
+    <Content Include="Assets\js\click.button.data-api.html" />
+    <Content Include="Assets\js\click.carousel.data-api.html" />
+    <Content Include="Assets\js\click.collapse.data-api.html" />
+    <Content Include="Assets\js\click.dismiss.modal.html" />
+    <Content Include="Assets\js\click.dropdown.data-api.html" />
+    <Content Include="Assets\js\click.DT.html" />
+    <Content Include="Assets\js\click.modal.data-api.html" />
+    <Content Include="Assets\js\click.tab.data-api.html" />
+    <Content Include="Assets\js\click._change.html" />
+    <Content Include="Assets\js\click._submit keypress._submit.html" />
+    <Content Include="Assets\js\date-time\2.0.0.html" />
+    <Content Include="Assets\js\date-time\blur.timepicker.html" />
+    <Content Include="Assets\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="Assets\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="Assets\js\date-time\button.applyBtn.html" />
+    <Content Include="Assets\js\date-time\button.clearBtn.html" />
+    <Content Include="Assets\js\date-time\changeTime.timepicker.html" />
+    <Content Include="Assets\js\date-time\click.timepicker.html" />
+    <Content Include="Assets\js\date-time\daterangepicker.min.js" />
+    <Content Include="Assets\js\date-time\focus.timepicker.html" />
+    <Content Include="Assets\js\date-time\hide.timepicker.html" />
+    <Content Include="Assets\js\date-time\input.bootstrap-timepicker-hour.html" />
+    <Content Include="Assets\js\date-time\input.bootstrap-timepicker-meridian.html" />
+    <Content Include="Assets\js\date-time\input.bootstrap-timepicker-minute.html" />
+    <Content Include="Assets\js\date-time\input.bootstrap-timepicker-second.html" />
+    <Content Include="Assets\js\date-time\keydown.timepicker.html" />
+    <Content Include="Assets\js\date-time\mm\dd\yyyy.html" />
+    <Content Include="Assets\js\date-time\moment.min.js" />
+    <Content Include="Assets\js\date-time\mousedown.timepicker.html" />
+    <Content Include="Assets\js\date-time\select.monthselect.html" />
+    <Content Include="Assets\js\date-time\select.yearselect.html" />
+    <Content Include="Assets\js\date-time\show.timepicker.html" />
+    <Content Include="Assets\js\date-time\span.bootstrap-timepicker-hour.html" />
+    <Content Include="Assets\js\date-time\span.bootstrap-timepicker-meridian.html" />
+    <Content Include="Assets\js\date-time\span.bootstrap-timepicker-minute.html" />
+    <Content Include="Assets\js\date-time\span.bootstrap-timepicker-second.html" />
+    <Content Include="Assets\js\date-time\td.available.html" />
+    <Content Include="Assets\js\date-time\tfoot th.today.html" />
+    <Content Include="Assets\js\ddd M\d.html" />
+    <Content Include="Assets\js\dddd M\d.html" />
+    <Content Include="Assets\js\div.chzn-drop.html" />
+    <Content Include="Assets\js\div.chzn-search.html" />
+    <Content Include="Assets\js\div.dataTables_filter.html" />
+    <Content Include="Assets\js\div.fc-day-content div.html" />
+    <Content Include="Assets\js\div.fc-event-time.html" />
+    <Content Include="Assets\js\div.fc-event-title.html" />
+    <Content Include="Assets\js\div.ui-draggable-iframeFix.html" />
+    <Content Include="Assets\js\excanvas.min.js" />
+    <Content Include="Assets\js\flot\0.8.1.html" />
+    <Content Include="Assets\js\flot\jquery.flot.min.js" />
+    <Content Include="Assets\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="Assets\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="Assets\js\focus.mask.html" />
+    <Content Include="Assets\js\focus.typeahead.data-api.html" />
+    <Content Include="Assets\js\focusin.modal.html" />
+    <Content Include="Assets\js\fuelux\button.btn-next.html" />
+    <Content Include="Assets\js\fuelux\button.btn-prev.html" />
+    <Content Include="Assets\js\fuelux\data\fuelux.tree-sampledata.js" />
+    <Content Include="Assets\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="Assets\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="Assets\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="Assets\js\fuelux\li.complete.html" />
+    <Content Include="Assets\js\fuelux\mousedown.spinner.data-api.html" />
+    <Content Include="Assets\js\fuelux\mousedown.wizard.data-api.html" />
+    <Content Include="Assets\js\fuelux\span.badge.html" />
+    <Content Include="Assets\js\fullcalendar.min.js" />
+    <Content Include="Assets\js\google-code-prettify\prettify.css" />
+    <Content Include="Assets\js\google-code-prettify\prettify.js" />
+    <Content Include="Assets\js\holder\holder.js" />
+    <Content Include="Assets\js\html5shiv.js" />
+    <Content Include="Assets\js\in.tag.html" />
+    <Content Include="Assets\js\input.autosize keyup.autosize.html" />
+    <Content Include="Assets\js\input.autosize.html" />
+    <Content Include="Assets\js\input.select2-input.html" />
+    <Content Include="Assets\js\invalid-form.validate.html" />
+    <Content Include="Assets\js\jquery-1.10.2.min.js" />
+    <Content Include="Assets\js\jquery-2.0.3.min.js" />
+    <Content Include="Assets\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Assets\js\jquery.autosize-min.js" />
+    <Content Include="Assets\js\jquery.colorbox-min.js" />
+    <Content Include="Assets\js\jquery.dataTables.bootstrap.js" />
+    <Content Include="Assets\js\jquery.dataTables.min.js" />
+    <Content Include="Assets\js\jquery.easy-pie-chart.min.js" />
+    <Content Include="Assets\js\jquery.gritter.min.js" />
+    <Content Include="Assets\js\jquery.hotkeys.min.js" />
+    <Content Include="Assets\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="Assets\js\jquery.js" />
+    <Content Include="Assets\js\jquery.knob.min.js" />
+    <Content Include="Assets\js\jquery.maskedinput.min.js" />
+    <Content Include="Assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="Assets\js\jquery.slimscroll.min.js" />
+    <Content Include="Assets\js\jquery.sparkline.min.js" />
+    <Content Include="Assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Assets\js\jquery.validate.min.js" />
+    <Content Include="Assets\js\keydown.dropdown.data-api.html" />
+    <Content Include="Assets\js\keydown.mask.html" />
+    <Content Include="Assets\js\keypress.DT.html" />
+    <Content Include="Assets\js\keypress.inputlimiter.html" />
+    <Content Include="Assets\js\keypress.mask.html" />
+    <Content Include="Assets\js\keyup.dismiss.modal.html" />
+    <Content Include="Assets\js\keyup.DT.html" />
+    <Content Include="Assets\js\keyup.inputlimiter.html" />
+    <Content Include="Assets\js\keyup.k.html" />
+    <Content Include="Assets\js\lang-in.tag.html" />
+    <Content Include="Assets\js\lang-uq.val.html" />
+    <Content Include="Assets\js\li.active-result.html" />
+    <Content Include="Assets\js\li.dropdown.html" />
+    <Content Include="Assets\js\li.no-results.html" />
+    <Content Include="Assets\js\li.search-choice.html" />
+    <Content Include="Assets\js\li.search-field.html" />
+    <Content Include="Assets\js\li.select2-more-results.html" />
+    <Content Include="Assets\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="Assets\js\markdown\click.markdown.data-api.html" />
+    <Content Include="Assets\js\markdown\markdown.min.js" />
+    <Content Include="Assets\js\markdown\URL\Link.html" />
+    <Content Include="Assets\js\Microsoft.XMLDOM.html" />
+    <Content Include="Assets\js\Microsoft.XMLHTTP.html" />
+    <Content Include="Assets\js\mousemove.jqs.html" />
+    <Content Include="Assets\js\mousemove.k mouseup.k keyup.k.html" />
+    <Content Include="Assets\js\mousemove.k.html" />
+    <Content Include="Assets\js\mouseup.k mousemove.k keyup.k.html" />
+    <Content Include="Assets\js\mouseup.k.html" />
+    <Content Include="Assets\js\Please enter a valid time in 12-hour am\pm format.html" />
+    <Content Include="Assets\js\prettify.js" />
+    <Content Include="Assets\js\propertychange.autosize.html" />
+    <Content Include="Assets\js\propertychange.select2 DOMAttrModified.select2.html" />
+    <Content Include="Assets\js\propertychange._change.html" />
+    <Content Include="Assets\js\resize.autosize.html" />
+    <Content Include="Assets\js\resize.jqs scroll.jqs.html" />
+    <Content Include="Assets\js\scroll.affix.data-api.html" />
+    <Content Include="Assets\js\scroll.droppable.html" />
+    <Content Include="Assets\js\scroll.scroll-spy.data-api.html" />
+    <Content Include="Assets\js\select2.min.js" />
+    <Content Include="Assets\js\selectstart.DT.html" />
+    <Content Include="Assets\js\selectstart.ui.html" />
+    <Content Include="Assets\js\spin.min.js" />
+    <Content Include="Assets\js\submit._submit.html" />
+    <Content Include="Assets\js\th.fc-agenda-gutter.html" />
+    <Content Include="Assets\js\th.fc-week-number.html" />
+    <Content Include="Assets\js\touchend.k.html" />
+    <Content Include="Assets\js\touchmove.k touchend.k.html" />
+    <Content Include="Assets\js\touchmove.k.html" />
+    <Content Include="Assets\js\ui.draggable.html" />
+    <Content Include="Assets\js\ui.droppable.html" />
+    <Content Include="Assets\js\ui.mouse.html" />
+    <Content Include="Assets\js\ui.resizable.html" />
+    <Content Include="Assets\js\ui.selectable.html" />
+    <Content Include="Assets\js\ui.slider.html" />
+    <Content Include="Assets\js\ui.sortable.html" />
+    <Content Include="Assets\js\ul.chzn-choices.html" />
+    <Content Include="Assets\js\ul.chzn-results.html" />
+    <Content Include="Assets\js\uq.val.html" />
+    <Content Include="Assets\js\x-editable\ace-editable.min.js" />
+    <Content Include="Assets\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Assets\js\x-editable\change.editable.html" />
+    <Content Include="Assets\js\x-editable\click.editable.html" />
+    <Content Include="Assets\js\x-editable\div.editable-input.html" />
+    <Content Include="Assets\js\x-editable\focus.datepicker.data-api click.datepicker.data-api.html" />
+    <Content Include="Assets\js\x-editable\keydown.editable.html" />
+    <Content Include="Assets\js\x-editable\keyup.editable.html" />
+    <Content Include="Assets\js\x-editable\mm\dd\yyyy.html" />
+    <Content Include="Assets\js\x-editable\Object.keys called on a non-object.html" />
+    <Content Include="Assets\js\x-editable\save.internal.html" />
+    <Content Include="Assets\js\x-editable\tfoot th.clear.html" />
+    <Content Include="Assets\js\x-editable\tfoot th.today.html" />
+    <Content Include="bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="Templates\ajax.js" />
+    <Content Include="Templates\diaosi.mp4" />
+    <Content Include="ECharts\charts\echarts.html" />
+    <Content Include="ECharts\charts\VitalSigns.html" />
+    <Content Include="ECharts\dist\chart\bar.js" />
+    <Content Include="ECharts\dist\chart\chord.js" />
+    <Content Include="ECharts\dist\chart\eventRiver.js" />
+    <Content Include="ECharts\dist\chart\force.js" />
+    <Content Include="ECharts\dist\chart\funnel.js" />
+    <Content Include="ECharts\dist\chart\gauge.js" />
+    <Content Include="ECharts\dist\chart\k.js" />
+    <Content Include="ECharts\dist\chart\line.js" />
+    <Content Include="ECharts\dist\chart\map.js" />
+    <Content Include="ECharts\dist\chart\pie.js" />
+    <Content Include="ECharts\dist\chart\radar.js" />
+    <Content Include="ECharts\dist\chart\scatter.js" />
+    <Content Include="ECharts\dist\chart\treemap.js" />
+    <Content Include="ECharts\dist\chart\venn.js" />
+    <Content Include="ECharts\dist\echarts-all.js" />
+    <Content Include="ECharts\dist\echarts.js" />
+    <Content Include="Templates\Login.html" />
+    <Content Include="Templates\NVelocity.dll" />
+    <Content Include="Templates\register.html" />
+    <Content Include="Templates\Test1.html" />
+    <Content Include="Templates\UserEdit.html" />
+    <Content Include="Templates\UserList.html" />
+    <Content Include="Web.config" />
+    <Content Include="WebService1.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login.ashx.cs">
+      <DependentUpon>Login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\register.ashx.cs">
+      <DependentUpon>register.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Test1.ashx.cs">
+      <DependentUpon>Test1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserEdit.ashx.cs">
+      <DependentUpon>UserEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserList.ashx.cs">
+      <DependentUpon>UserList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidCode.ashx.cs">
+      <DependentUpon>ValidCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\js\README.md" />
+    <Content Include="Login.ashx" />
+    <Content Include="Assets\font\fontawesome-webfont.woff" />
+    <Content Include="Assets\font\fontawesome-webfont_2d2816fe.eot" />
+    <Content Include="Assets\font\fontawesome-webfont_aea8981c.eot" />
+    <Content Include="Assets\font\fontawesome-webfont_aea8981c.ttf" />
+    <Content Include="Assets\font\fontawesome-webfont_aea8981c.woff" />
+    <Content Include="UserList.ashx" />
+    <Content Include="UserEdit.ashx" />
+    <Content Include="Templates\Test1.ashx" />
+    <Content Include="Templates\register.ashx" />
+    <Content Include="ValidCode.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CTl.BLL\CTL.BLL.csproj">
+      <Project>{678f9e94-2c1a-4fe9-b720-c1ea573800d2}</Project>
+      <Name>CTL.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CTL.Common\CTL.Common.csproj">
+      <Project>{8ed84ed8-9513-4b99-894e-e52cf450f2e5}</Project>
+      <Name>CTL.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\CTL.Models.csproj">
+      <Project>{f5606571-4a4b-40c3-a51d-5104eeead22c}</Project>
+      <Name>CTL.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3715/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
